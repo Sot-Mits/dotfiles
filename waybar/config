@@ -1,0 +1,93 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 8,
+    "modules-left": ["battery", "wireplumber", "wireplumber#source", "clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["cpu", "network", "backlight"],
+
+    "backlight": {
+        "device": "acpi_video1",
+        "format": "{icon}: {percent}%",
+        "tooltip": false,
+        "format-icons": ["🌕", "🌔", "🌓", "🌒", "🌑"]
+    },
+
+    "battery": {
+        "interval": 60,
+        "format": "{icon}: {capacity}%",
+        "format-icons": {
+        "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+    },
+    
+    "clock": {
+        "interval": 1,
+        "tooltip-format": false, 
+        "format-alt": "{:%H:%M:%S}",
+        "format": "{:%A - %Y.%m.%d - %H:%M:%S}"
+    }, 
+    
+    "cpu": {
+        "interval": 1,
+        "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{icon12}{icon13}{icon14}{icon15}",
+        "format-icons": [
+            "<span color='#98971a'>▁</span>", // green
+            "<span color='#689d6a'>▂</span>", // aqua
+            "<span color='#458588'>▃</span>", // blue
+            "<span color='#fbf1c7'>▄</span>", // white
+            "<span color='#fbf1c7'>▅</span>", // white
+            "<span color='#d79921'>▆</span>", // yellow
+            "<span color='#d65d0e'>▇</span>", // orange
+            "<span color='#cc241d'>█</span>"  // red
+        ]
+    },
+        
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+        },
+        "sort-by-number": true
+    },
+
+    "network": {
+        "interface": "wlp6s0",
+        "format": "⬇️{bandwidthDownBytes}-⬆️{bandwidthUpBytes}",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "format-disconnected": "Disconnected",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-disabled": "Disabled",
+        "tooltip-format-disabled": "Disabled",
+        "max-length": 50,
+    },
+    
+    
+    "wireplumber": {
+        "format": "{icon}: {volume}%",
+        "format-muted": ": Muted",
+                "scroll-step": 1,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "format-icons": ["", "", ""]
+    },
+    
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "format": "󰍬",
+        "format-muted": "󰍭"
+    }
+}

@@ -1,0 +1,121 @@
+* {
+    font-family: 'SF Mono', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ebdbb2;
+}
+
+.modules-left {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.modules-right {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.modules-center {
+    padding-right: 4px; 
+    padding-left: 4px;
+
+}
+
+#backlight {
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #282828;
+    color: #fe8019;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#battery {
+    padding-right: 8px;
+    padding-left: 8px;
+    color: #83a598;
+    background-color: #282828;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#cpu {
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #282828;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#clock {
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #282828;
+    color: #b8bb26;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#network {
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #282828;
+    color: #8ec07c;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#workspaces {
+    background-color: transparent;
+    color: transparent;
+
+}
+
+#workspaces button {
+    background-color: #282828;
+    color: #ebdbb2;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#workspaces button.active {
+    background-color: #b16286;
+    color: #282828;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#workspaces button:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+
+    background-color: #ebdbb2;
+    color: #282828;
+}
+
+#wireplumber {
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #282828;
+    color: #fabd2f;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#wireplumber.source {
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #282828;
+    color: #fb4934;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+

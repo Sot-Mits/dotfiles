@@ -62,9 +62,9 @@ vim.api.nvim_exec(
     augroup ProjectDrawer
         if argc() == 0
             autocmd!
-            autocmd TabNew * :Vexplore!
-            autocmd VimEnter * :Vexplore!
-        
+            autocmd TabNew * :Vexplore
+            autocmd VimEnter * :Vexplore
+
             wincmd l
     
             autocmd BufEnter * if (winnr('$') == 1 && bufwinnr('%') == 1 && &filetype == 'netrw') | q | endif
