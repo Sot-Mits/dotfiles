@@ -3,33 +3,65 @@
     "position": "top",
     "height": 34,
     "margin-top": 8,
-    "modules-left": ["battery", "wireplumber", "wireplumber#source", "clock"],
+    "modules-left": ["battery", "wireplumber", "wireplumber#source", "clock", "power-profiles-daemon"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["cpu", "network", "backlight"],
 
     "backlight": {
         "device": "acpi_video1",
-        "format": "{icon}: {percent}%",
-        "tooltip": false,
-        "format-icons": ["🌕", "🌔", "🌓", "🌒", "🌑"]
+        "format": "{icon}",
+        "format-alt": "{icon}: {percent}%",
+        "tooltip-format": "Brightness {percent}%",
+        "format-icons": [
+            "<span color='#af3a03'>🌕</span>",
+            "<span color='#af3a04'>🌔</span>",
+            "<span color='#d65d0e'>🌓</span>",
+            "<span color='#fe8019'>🌒</span>",
+            "<span color='#fe8019'>🌑</span>"
+        ]
     },
 
     "battery": {
         "interval": 60,
-        "format": "{icon}: {capacity}%",
+        "format": "{icon}",
+        "format-alt": "{icon}: {capacity}%",
         "format-icons": {
-        "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+            "default": [
+                "<span color='#cc241d'>󰂎</span>",
+                "<span color='#cc241d'>󰁺</span>",
+                "<span color='#d65d0e'>󰁻</span>",
+                "<span color='#d65d0e'>󰁼</span>",
+                "<span color='#d79921'>󰁽</span>",
+                "<span color='#fbf1c7'>󰁾</span>",
+                "<span color='#458588'>󰁿</span>",
+                "<span color='#689d6a'>󰂀</span>",
+                "<span color='#689d6a'>󰂁</span>",
+                "<span color='#98971a'>󰂂</span>",
+                "<span color='#98971a'>󰁹</span>"
+            ],
+            "charging": [
+                "<span color='#cc241d'>󰢟",
+                "<span color='#cc241d'>󰢜</span>",
+                "<span color='#d65d0e'>󰂆</span>",
+                "<span color='#d65d0e'>󰂇</span>",
+                "<span color='#d79921'>󰂈</span>",
+                "<span color='#fbf1c7'>󰢝</span>",
+                "<span color='#458588'>󰂉</span>",
+                "<span color='#689d6a'>󰢞</span>",
+                "<span color='#689d6a'>󰂊</span>",
+                "<span color='#98971a'>󰂋</span>",
+                "<span color='#98971a'>󰂅</span>"
+            ]
         },
     },
-    
+
     "clock": {
         "interval": 1,
-        "tooltip-format": false, 
-        "format-alt": "{:%H:%M:%S}",
-        "format": "{:%A - %Y.%m.%d - %H:%M:%S}"
-    }, 
-    
+        "tooltip": false,
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%H:%M:%S - %d.%m.%Y}"
+    },
+
     "cpu": {
         "interval": 1,
         "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{icon12}{icon13}{icon14}{icon15}",
@@ -44,7 +76,7 @@
             "<span color='#cc241d'>█</span>"  // red
         ]
     },
-        
+
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -74,8 +106,18 @@
         "tooltip-format-disabled": "Disabled",
         "max-length": 50,
     },
-    
-    
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
     "wireplumber": {
         "format": "{icon}: {volume}%",
         "format-muted": ": Muted",
@@ -83,7 +125,7 @@
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "format-icons": ["", "", ""]
     },
-    
+
     "wireplumber#source": {
         "node-type": "Audio/Source",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
