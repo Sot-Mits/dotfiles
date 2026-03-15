@@ -27,28 +27,28 @@
         "format-alt": "{icon}: {capacity}%",
         "format-icons": {
             "default": [
-                "<span color='#cc241d'>󰂎</span>",
-                "<span color='#cc241d'>󰁺</span>",
+                "<span color='#fb4934'>󰂎</span>",
+                "<span color='#fb4934'>󰁺</span>",
                 "<span color='#d65d0e'>󰁻</span>",
                 "<span color='#d65d0e'>󰁼</span>",
-                "<span color='#d79921'>󰁽</span>",
+                "<span color='#fabd2f'>󰁽</span>",
                 "<span color='#fbf1c7'>󰁾</span>",
-                "<span color='#458588'>󰁿</span>",
-                "<span color='#689d6a'>󰂀</span>",
-                "<span color='#689d6a'>󰂁</span>",
+                "<span color='#83a598'>󰁿</span>",
+                "<span color='#8ec07c'>󰂀</span>",
+                "<span color='#8ec07c'>󰂁</span>",
                 "<span color='#98971a'>󰂂</span>",
                 "<span color='#98971a'>󰁹</span>"
             ],
             "charging": [
-                "<span color='#cc241d'>󰢟",
-                "<span color='#cc241d'>󰢜</span>",
+                "<span color='#fb4934'>󰢟",
+                "<span color='#fb4934'>󰢜</span>",
                 "<span color='#d65d0e'>󰂆</span>",
                 "<span color='#d65d0e'>󰂇</span>",
-                "<span color='#d79921'>󰂈</span>",
+                "<span color='#fabd2f'>󰂈</span>",
                 "<span color='#fbf1c7'>󰢝</span>",
-                "<span color='#458588'>󰂉</span>",
-                "<span color='#689d6a'>󰢞</span>",
-                "<span color='#689d6a'>󰂊</span>",
+                "<span color='#83a598'>󰂉</span>",
+                "<span color='#8ec07c'>󰢞</span>",
+                "<span color='#8ec07c'>󰂊</span>",
                 "<span color='#98971a'>󰂋</span>",
                 "<span color='#98971a'>󰂅</span>"
             ]
@@ -67,13 +67,13 @@
         "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{icon12}{icon13}{icon14}{icon15}",
         "format-icons": [
             "<span color='#98971a'>▁</span>", // green
-            "<span color='#689d6a'>▂</span>", // aqua
-            "<span color='#458588'>▃</span>", // blue
+            "<span color='#8ec07c'>▂</span>", // aqua
+            "<span color='#83a598'>▃</span>", // blue
             "<span color='#fbf1c7'>▄</span>", // white
             "<span color='#fbf1c7'>▅</span>", // white
-            "<span color='#d79921'>▆</span>", // yellow
+            "<span color='#fabd2f'>▆</span>", // yellow
             "<span color='#d65d0e'>▇</span>", // orange
-            "<span color='#cc241d'>█</span>"  // red
+            "<span color='#fb4934'>█</span>"  // red
         ]
     },
 
@@ -90,7 +90,7 @@
             "7": "7",
             "8": "8",
             "9": "9",
-            "10": "10",
+            "10": "0",
         },
         "sort-by-number": true
     },
